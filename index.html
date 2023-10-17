@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>勞動部勞動力發展署─運動廣場連結網</title>
+  <style>
+    body {
+      background-color: #42413C;
+    }
+
+    #main {
+      width: 1024px;
+      height: 768px;
+      /* 水平置中 */
+      margin: auto;
+      background-color: #FFF;
+    }
+
+    table {
+      width: 100%;
+      /* 沒設會讓儲存格間有間距，用途:讓儲存格間的距離歸零 */
+      border-collapse: collapse;
+      text-align: center;
+    }
+
+    table td {
+      /* 測試間距問題，搭配border-collapse使用 */
+      /* border: 1px solid black; */
+      padding: 0;
+    }
+
+    #top {
+      width: 1024px;
+      height: 90px;
+      background: #00B0F0;
+    }
+
+    #top .logo {
+      width: 180px;
+      height: 90px;
+    }
+
+    #top .main-title {
+      font-size: 52px;
+      font-family: '標楷體';
+      color: #FFF;
+      text-shadow: 10px 10px 15px #333;
+    }
+
+    #menu {
+      width: 1024px;
+      height: 25px;
+      background: #eeeeee;
+
+    }
+
+    /* 一般狀態 */
+    #menu a {
+      background: #EEE;
+      color: #000;
+      text-decoration: none;
+      /* 讓a充滿整個td*/
+      display: block;
+    }
+
+    /* 鼠標移過去效果 */
+    #menu a:hover {
+      font-size: 14px;
+      font-weight: bold;
+      /* 縮寫 font:字體大小 字型 */
+      /* font: bold 14px; */
+      background: #FF0;
+      color: #f00;
+      cursor: pointer;
+    }
+
+    #content {
+      /* 因為要預留padding 20px  */
+      /* 1024-40(上下)=984 */
+      width: 984px;
+      /*減去main-(top、menu、footer): 768-90-45-25 =608*/
+      /*再去除左右padding:608-40= 568 */
+      height: 568px;
+      padding: 20px;
+      background: #FFF;
+      font-size: 14px;
+      color: #000;
+    }
+
+    #content iframe {
+      width: 984px;
+      height: 568px;
+    }
+
+    #footer {
+      width: 1024px;
+      height: 45px;
+      background: #CCC;
+      font-size: 14px;
+      /* 水平置中 */
+      text-align: center;
+      /* 垂直置中(可以不做) */
+      /* (45-14)/2 */
+      line-height: 22.5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main">
+    <div id="top">
+      <table>
+        <tr>
+          <td class="logo">
+            <a href="./index.html">
+              <img src="./images/logo.png" alt="運動廣場連結網-回首頁" title="運動廣場連結網-回首頁">
+            </a>
+          </td>
+          <td class="main-title">
+            運動廣場連結網
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div id="menu">
+      <!-- hover時表格不抖動 => style="table-layout:fixed"-->
+      <table style="table-layout:fixed">
+        <tr>
+          <!-- 第一個沒有iframe，其他都有 -->
+          <td><a href="./index.html">首頁</a></td>
+          <td><a href="./results/health.html" target="iframe">健康天地</a></td>
+          <td><a href="./results/basketball.html" target="iframe">籃球介紹</a></td>
+          <td><a href="./results/baseball.html" target="iframe">棒球介紹</a></td>
+          <td><a href="./results/swimming.html" target="iframe">游泳介紹</a></td>
+          <td><a href="./results/msgboard.html" target="iframe">訪客留言</a></td>
+          <td><a href="./results/reference.html" target="iframe">資料來源</a></td>
+        </tr>
+      </table>
+    </div>
+    <div id="content">
+      <iframe src="./results/main.html" frameborder="0" name="iframe"></iframe>
+    </div>
+    <div id="footer">
+      網頁設計及維護：06謝婷茜<br>
+      最近更新 日期：2023/10/16
+    </div>
+
+  </div>
+</body>
+
+</html>
