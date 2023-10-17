@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #main {
+      width: 1024px;
+      height: 768px;
+      margin: auto;
+      border: 1px solid black;
+    }
+
+    #top {
+      width: 1000px;
+      height: 65px;
+      /* 水平置中 */
+      margin: auto;
+      text-align: center;
+      background: #00f;
+
+    }
+
+    #left {
+      width: 200px;
+      height: 683px;
+      background: #0ff;
+      float: left;
+      margin-left: 12px;
+    }
+
+    #left table {
+      width: 200px;
+      text-align: center;
+    }
+
+    #left table img {
+      width: 120px;
+      height: 40px;
+    }
+
+    /* 圖片效果 */
+    #left table img:hover {
+      filter: hue-rotate(120deg);
+    }
+
+    #left p {
+      text-align: center;
+    }
+
+    #right {
+      width: 800px;
+      height: 683px;
+      float: right;
+      background: palegoldenrod;
+      margin-right: 12px;
+    }
+
+    #right marquee {
+      width: 800px;
+      height: 29px;
+      background: #ddd;
+      /* 因為marquee下方會留一小格間距，處理iframe畫面跑位的問題 */
+      vertical-align: middle;
+
+    }
+
+    #right iframe {
+      width: 800px;
+      height: 654px;
+      /* background: #000; */
+    }
+
+    #footer {
+      width: 1000px;
+      height: 20px;
+      /* 水平置中 */
+      margin: auto;
+      clear: both;
+      background: paleturquoise;
+      font: 16px 標楷體;
+      color: #000;
+      text-align: center;
+      /*可不加*/
+      line-height: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main">
+    <div id="top">
+      <a href="./index.html"><img src="../images/monkey.gif"></a>
+    </div>
+    <div id="left">
+      <table>
+        <tr>
+          <td>
+            <a href="./park/yangmingshan.html" target="iframe">
+              <img src="./images/park0302.jpg" alt="陽明山國家公園" title="陽明山國家公園">
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <a href="./park/sheipa.html" target="iframe">
+              <img src="./images/park0303.jpg" alt="雪霸國家公園" title="雪霸國家公園">
+            </a>
+          </td>
+
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <img src="./images/park0304.jpg" alt="太魯閣國家公園" title="太魯閣國家公園">
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <img src="./images/park0305.jpg" alt="玉山國家公園" title="玉山國家公園">
+          </td>
+        </tr>
+      </table>
+      <p><a href="./others/park.mp3" download>檔案下載</a></p>
+    </div>
+    <div id="right">
+      <marquee>歡迎進入國家公園介紹網，本網站有詳細的國家公園介紹哦！</marquee>
+      <iframe src="./others/main.html" frameborder="0" name="iframe"></iframe>
+    </div>
+    <div id="footer">
+      網頁設計及維護：06謝婷茜、最近更新日期：112/10/17
+    </div>
+  </div>
+</body>
+
+</html>
